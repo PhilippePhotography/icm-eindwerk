@@ -18,4 +18,18 @@
     "layers": "5",
     "story": "Tijdens een wandeling in het Brakelbos viel mijn aandacht niet op de bomen zelf maar op het samenspel van kleur en licht."
   }
+  {
+  "id": "towerbridge-nocturne",
+  "title": "Tower Bridge Nocturne",
+  "location": "Londen, Verenigd Koninkrijk",
+  "year": "2026",
+  "thumbnail": "photos/tower_bridge.jpg",
+  "image": "photos/tower_bridge.jpg",
+  "description": "Een impressionistische interpretatie van Tower Bridge bij valavond. Door een bewuste ICM-beweging tijdens de opname vervagen de contouren van de brug en de voorbijgangers tot een dromerig spel van licht, kleur en beweging.",
+  "story": "Deze foto ontstond tijdens een avondwandeling over Tower Bridge. De combinatie van kunstlicht, beweging en lange sluitertijd resulteerde in een abstracte weergave waarin architectuur en menselijke aanwezigheid samensmelten tot één dynamisch beeld.",
+  "technique": "Intentional Camera Movement (ICM)",
+  "camera": "Canon EOS R6",
+  "lens": "RF 24-105mm F4L IS USM",
+  "settings": "1/2 sec · f/8 · ISO 100 · 35mm"
+  }
 ]
