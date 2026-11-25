@@ -1,188 +1,208 @@
-
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>Photo Detail</title>
-
-<link rel="stylesheet"
-      href="../css/photo.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Detail</title>
+    <link rel="stylesheet" href="../css/photo.css">
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
 
-    <a href="../index.html" class="back-link">
-        ← Terug naar galerij
-    </a>
+    <header class="header">
 
-    <div id="photo-content">
-        Laden...
-    </div>
+        <div>
+            <div class="logo">
+                PHILIPPE VERLINDE
+            </div>
+
+            <div class="subtitle">
+                FINE ART PHOTOGRAPHY
+            </div>
+        </div>
+
+        <nav>
+            <a href="../index.html">Expo</a>
+            <a href="#">Over mij</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <div id="content"></div>
 
 </div>
 
 <script>
 
-const params =
-    new URLSearchParams(
-        window.location.search
-    );
-
-const photoId =
-    params.get("id");
+const params = new URLSearchParams(window.location.search);
+const photoId = params.get("id");
 
 fetch("../data/photos.json")
 .then(response => response.json())
 
 .then(data => {
 
-    const photo =
-        data.find(
-            p => p.id === photoId
-        );
+    const photo = data.find(
+        p => p.id === photoId
+    );
 
-    if (!photo) {
+    if(!photo){
 
-        document.getElementById(
-            "photo-content"
-        ).innerHTML =
-        "<h2>Foto niet gevonden</h2>";
+        document.getElementById("content")
+            .innerHTML =
+            "<h2>Foto niet gevonden</h2>";
 
         return;
     }
 
-    document.getElementById(
-        "photo-content"
-    ).innerHTML =
+    document.getElementById("content")
+    .innerHTML =
 
     `
-    <div class="photo-page">
+    <div class="hero">
 
-        <img
-            class="main-image"
-            src="${photo.image}"
-            alt="${photo.title}">
+        <div class="image-column">
 
-        <h1>
-            ${photo.title}
-        </h1>
-
-        <div class="meta">
-            ${photo.location}
-            ·
-            ${photo.year}
-        </div>
-
-        <div class="story">
-            <h2>Verhaal</h2>
-            <p>${photo.story}</p>
-        </div>
-
-        <div class="technical">
-
-            <h2>
-                Technische gegevens
-            </h2>
-
-            <table>
-
-                <tr>
-                    <td>Camera</td>
-                    <td>${photo.camera || "-"}</td>
-                </tr>
-
-                <tr>
-                    <td>Lens</td>
-                    <td>${photo.lens || "-"}</td>
-                </tr>
-
-                <tr>
-                    <td>Diafragma</td>
-                    <td>${photo.aperture || "-"}</td>
-                </tr>
-
-                <tr>
-                    <td>Sluitertijd</td>
-                    <td>${photo.shutter || "-"}</td>
-                </tr>
-
-                <tr>
-                    <td>ISO</td>
-                    <td>${photo.iso || "-"}</td>
-                </tr>
-
-                <tr>
-                    <td>Techniek</td>
-                    <td>${photo.technique || "-"}</td>
-                </tr>
-
-                <tr>
-                    <td>Bronbeelden</td>
-                    <td>${photo.sourceImages || "-"}</td>
-                </tr>
-
-                <tr>
-                    <td>Lagen</td>
-                    <td>${photo.layers || "-"}</td>
-                </tr>
-
-            </table>
+            <img
+                class="main-image"
+                src="${photo.image}"
+                alt="${photo.title}">
 
         </div>
 
-        ${
-            photo.original
-            ?
-            `
-            <div class="action">
-                <a href="${photo.original}"
-                   target="_blank">
-                   Bekijk originele foto
-                </a>
+        <div class="info-column">
+
+            <h1>
+                ${photo.title}
+            </h1>
+
+            <div class="location">
+                ${photo.location} · ${photo.year}
             </div>
-            `
-            :
-            ""
-        }
 
-        ${
-            photo.audio
-            ?
-            `
-            <div class="audio-section">
-                <h2>Audio</h2>
+            <div class="divider"></div>
 
-                <audio controls>
-                    <source
-                        src="${photo.audio}">
-                </audio>
-            </div>
-            `
-            :
-            ""
-        }
+            ${
+                photo.audio
+                ?
+                `
+                <div class="audio-box">
+                    <div class="audio-title">
+                        Luister naar het verhaal
+                    </div>
+
+                    <audio controls>
+                        <source src="${photo.audio}">
+                    </audio>
+                </div>
+                `
+                : ""
+            }
+
+            <h2>Het verhaal</h2>
+
+            <p class="story">
+                ${photo.story}
+            </p>
+
+        </div>
 
     </div>
-    `;
 
+    <section class="technical">
+
+        <div class="tech-item">
+            <div class="tech-value">${photo.camera}</div>
+            <div class="tech-label">Camera</div>
+        </div>
+
+        <div class="tech-item">
+            <div class="tech-value">${photo.lens}</div>
+            <div class="tech-label">Lens</div>
+        </div>
+
+        <div class="tech-item">
+            <div class="tech-value">${photo.aperture}</div>
+            <div class="tech-label">Diafragma</div>
+        </div>
+
+        <div class="tech-item">
+            <div class="tech-value">${photo.shutter}</div>
+            <div class="tech-label">Sluitertijd</div>
+        </div>
+
+        <div class="tech-item">
+            <div class="tech-value">${photo.iso}</div>
+            <div class="tech-label">ISO</div>
+        </div>
+
+    </section>
+
+    ${
+        photo.original
+        ?
+        `
+        <section class="before-after">
+
+            <h2>
+                Van origineel naar ICM
+            </h2>
+
+            <div class="compare">
+
+                <div>
+                    <img
+                        src="${photo.original}"
+                        alt="Origineel">
+
+                    <div class="caption">
+                        Originele opname
+                    </div>
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div>
+                    <img
+                        src="${photo.image}"
+                        alt="ICM">
+
+                    <div class="caption">
+                        Eindresultaat
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        `
+        : ""
+    }
+
+    <div class="back-link">
+
+        <a href="../index.html">
+            ← Terug naar overzicht
+        </a>
+
+    </div>
+
+    `;
 })
 
 .catch(error => {
 
     console.error(error);
 
-    document.getElementById(
-        "photo-content"
-    ).innerHTML =
-    "<h2>Fout bij laden van gegevens</h2>";
-
+    document.getElementById("content")
+        .innerHTML =
+        "<h2>Fout bij laden van gegevens</h2>";
 });
 
 </script>
