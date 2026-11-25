@@ -1,1 +1,37 @@
+{
+  "id": "herfstsymfonie",
 
+  "title": "Herfstsymfonie",
+
+  "location": "Brakelbos, België",
+
+  "year": "2026",
+
+  "image": "../photos/herfstsymfonie.jpg",
+
+  "thumbnail": "../photos/herfstsymfonie.jpg",
+
+  "audio": "../audio/herfstsymfonie.mp3",
+
+  "story": "Tijdens een wandeling in het Brakelbos...",
+
+  "camera": "Sony A7 IV",
+
+  "lens": "FE 24-70mm",
+
+  "aperture": "f/11",
+
+  "shutter": "1/4 sec",
+
+  "iso": "100",
+
+  "technique": "ICM Fine Art Composite",
+
+  "layers": "5",
+
+  "sourceImages": "4",
+
+  "original": "../photos/herfstsymfonie-original.jpg",
+
+  "signature": "../signature/signature.png"
+}
