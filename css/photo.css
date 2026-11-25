@@ -53,18 +53,18 @@ body{
     justify-content:center;
 }
 
-.main-image{
-    width:100%;
-    max-height:700px;
-    object-fit:contain;
-    background:white;
+.image-column{
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-start;
 }
 
-.info-column h1{
-    margin-top:0;
-    font-size:48px;
-    letter-spacing:2px;
-    text-transform:uppercase;
+.main-image{
+    width:100%;
+    max-width:700px;
+    max-height:750px;
+    object-fit:contain;
+    display:block;
 }
 
 .location{
