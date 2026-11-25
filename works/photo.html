@@ -1,1 +1,191 @@
 
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Photo Detail</title>
+
+<link rel="stylesheet"
+      href="../css/photo.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="../index.html" class="back-link">
+        ← Terug naar galerij
+    </a>
+
+    <div id="photo-content">
+        Laden...
+    </div>
+
+</div>
+
+<script>
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+const photoId =
+    params.get("id");
+
+fetch("../data/photos.json")
+.then(response => response.json())
+
+.then(data => {
+
+    const photo =
+        data.find(
+            p => p.id === photoId
+        );
+
+    if (!photo) {
+
+        document.getElementById(
+            "photo-content"
+        ).innerHTML =
+        "<h2>Foto niet gevonden</h2>";
+
+        return;
+    }
+
+    document.getElementById(
+        "photo-content"
+    ).innerHTML =
+
+    `
+    <div class="photo-page">
+
+        <img
+            class="main-image"
+            src="${photo.image}"
+            alt="${photo.title}">
+
+        <h1>
+            ${photo.title}
+        </h1>
+
+        <div class="meta">
+            ${photo.location}
+            ·
+            ${photo.year}
+        </div>
+
+        <div class="story">
+            <h2>Verhaal</h2>
+            <p>${photo.story}</p>
+        </div>
+
+        <div class="technical">
+
+            <h2>
+                Technische gegevens
+            </h2>
+
+            <table>
+
+                <tr>
+                    <td>Camera</td>
+                    <td>${photo.camera || "-"}</td>
+                </tr>
+
+                <tr>
+                    <td>Lens</td>
+                    <td>${photo.lens || "-"}</td>
+                </tr>
+
+                <tr>
+                    <td>Diafragma</td>
+                    <td>${photo.aperture || "-"}</td>
+                </tr>
+
+                <tr>
+                    <td>Sluitertijd</td>
+                    <td>${photo.shutter || "-"}</td>
+                </tr>
+
+                <tr>
+                    <td>ISO</td>
+                    <td>${photo.iso || "-"}</td>
+                </tr>
+
+                <tr>
+                    <td>Techniek</td>
+                    <td>${photo.technique || "-"}</td>
+                </tr>
+
+                <tr>
+                    <td>Bronbeelden</td>
+                    <td>${photo.sourceImages || "-"}</td>
+                </tr>
+
+                <tr>
+                    <td>Lagen</td>
+                    <td>${photo.layers || "-"}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        ${
+            photo.original
+            ?
+            `
+            <div class="action">
+                <a href="${photo.original}"
+                   target="_blank">
+                   Bekijk originele foto
+                </a>
+            </div>
+            `
+            :
+            ""
+        }
+
+        ${
+            photo.audio
+            ?
+            `
+            <div class="audio-section">
+                <h2>Audio</h2>
+
+                <audio controls>
+                    <source
+                        src="${photo.audio}">
+                </audio>
+            </div>
+            `
+            :
+            ""
+        }
+
+    </div>
+    `;
+
+})
+
+.catch(error => {
+
+    console.error(error);
+
+    document.getElementById(
+        "photo-content"
+    ).innerHTML =
+    "<h2>Fout bij laden van gegevens</h2>";
+
+});
+
+</script>
+
+</body>
+</html>
