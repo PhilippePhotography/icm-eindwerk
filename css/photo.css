@@ -327,6 +327,8 @@ nav a:hover{
     }
 
     .signature{
-        text-align:left;
+        text-align:center;
+        align-items:center;
+        width:100%;
     }
 }
