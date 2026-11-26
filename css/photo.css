@@ -245,4 +245,25 @@ nav a:hover {
     .signature {
         text-align: left;
     }
+    .technique{
+    
+        margin-top:60px;
+    
+        padding-top:30px;
+    
+        border-top:1px solid #e5e5e5;
+    }
+    
+    .technique h2{
+    
+        margin-bottom:15px;
+    }
+    
+    .technique p{
+    
+        margin-bottom:10px;
+    
+        line-height:1.8;
+    }
+    
 }
