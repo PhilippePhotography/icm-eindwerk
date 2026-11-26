@@ -12,11 +12,8 @@ body{
 }
 
 .page{
-
     max-width:1600px;
-
     margin:0 auto;
-
     padding:40px;
 }
 
@@ -25,50 +22,35 @@ body{
 ========================= */
 
 .header{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     margin-bottom:50px;
 }
 
 .logo{
-
     font-size:18px;
-
     letter-spacing:5px;
 }
 
 .subtitle{
-
     font-size:12px;
-
     color:#888;
-
     letter-spacing:2px;
-
     margin-top:6px;
 }
 
 nav{
-
     display:flex;
-
     gap:30px;
 }
 
 nav a{
-
     text-decoration:none;
-
     color:#666;
 }
 
 nav a:hover{
-
     color:#000;
 }
 
@@ -77,61 +59,42 @@ nav a:hover{
 ========================= */
 
 .hero{
-
     width:100%;
-
     margin-bottom:80px;
 }
 
 .image-column{
-
     width:100%;
 }
 
 .main-image{
-
     display:block;
-
     width:100%;
-
-    max-width:1100px;
-
+    max-width:1300px;
     margin:0 auto;
-
     height:auto;
 }
 
 .info-column{
-
-    max-width:750px;
-
+    max-width:850px;
     margin:60px auto 0 auto;
 }
 
 .info-column h1{
-
     font-size:64px;
-
     line-height:1.05;
-
     margin-bottom:15px;
 }
 
 .location{
-
     color:#777;
-
     margin-bottom:25px;
 }
 
 .divider{
-
     width:70px;
-
     height:2px;
-
     background:#222;
-
     margin-bottom:35px;
 }
 
@@ -140,19 +103,15 @@ nav a:hover{
 ========================= */
 
 .audio-box{
-
     margin-bottom:50px;
 }
 
 .audio-title{
-
     margin-bottom:15px;
-
     font-size:15px;
 }
 
 .audio-box audio{
-
     width:100%;
 }
 
@@ -161,66 +120,45 @@ nav a:hover{
 ========================= */
 
 .info-column h2{
-
     margin-bottom:15px;
-
     font-size:32px;
 }
 
 .story{
-
     line-height:1.9;
-
     color:#333;
-
     font-size:18px;
 }
 
 /* =========================
-   EXIF
+   TECHNICAL DATA
 ========================= */
 
 .technical{
-
     display:flex;
-
     justify-content:center;
-
     gap:70px;
-
     flex-wrap:wrap;
-
     margin:80px 0;
-
     padding:30px 0;
-
     border-top:1px solid #e5e5e5;
-
     border-bottom:1px solid #e5e5e5;
 }
 
 .tech-item{
-
     text-align:center;
 }
 
 .tech-value{
-
-    font-size:20px;
-
+    font-size:22px;
     font-weight:600;
-
-    margin-bottom:6px;
+    margin-bottom:8px;
 }
 
 .tech-label{
-
-    font-size:12px;
-
-    color:#777;
-
+    font-size:11px;
+    color:#888;
     text-transform:uppercase;
-
     letter-spacing:1px;
 }
 
@@ -229,5 +167,159 @@ nav a:hover{
 ========================= */
 
 .technique{
+    max-width:700px;
+    margin:80px auto;
+    text-align:center;
+    padding-top:35px;
+    border-top:1px solid #e5e5e5;
+}
 
-    max-width:
+.technique h2{
+    margin-bottom:20px;
+}
+
+.technique p{
+    margin-bottom:12px;
+    line-height:1.8;
+}
+
+.technique strong{
+    font-size:22px;
+}
+
+/* =========================
+   BEFORE / AFTER
+========================= */
+
+.before-after{
+    margin-top:100px;
+}
+
+.before-after h2{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.compare{
+    display:grid;
+    grid-template-columns:1fr 100px 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.compare img{
+    width:100%;
+    display:block;
+}
+
+.arrow{
+    text-align:center;
+    font-size:60px;
+    color:#888;
+}
+
+.caption{
+    margin-top:10px;
+    text-align:center;
+    color:#666;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.bottom-section{
+    margin-top:100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.back-link a{
+    text-decoration:none;
+    color:#666;
+}
+
+.back-link a:hover{
+    color:#000;
+}
+
+.signature{
+    text-align:right;
+}
+
+.signature img{
+    width:220px;
+}
+
+.signature-name{
+    font-family:cursive;
+    font-size:42px;
+    color:#222;
+}
+
+.signature-tag{
+    margin-top:8px;
+    font-size:10px;
+    letter-spacing:2px;
+    color:#777;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .page{
+        padding:25px;
+    }
+
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+    }
+
+    .info-column{
+        margin-top:40px;
+    }
+
+    .info-column h1{
+        font-size:42px;
+    }
+
+    .info-column h2{
+        font-size:28px;
+    }
+
+    .story{
+        font-size:16px;
+    }
+
+    .technical{
+        gap:40px;
+    }
+
+    .compare{
+        grid-template-columns:1fr;
+    }
+
+    .arrow{
+        transform:rotate(90deg);
+    }
+
+    .bottom-section{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:30px;
+    }
+
+    .signature{
+        text-align:left;
+    }
+}
