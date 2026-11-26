@@ -163,10 +163,29 @@ fetch("../data/photos.json")
     </p>
 
 </section>
-    </section>
+</section>
 
-    ${
-        photo.original
+<section class="technique">
+
+    <h2>
+        Techniek
+    </h2>
+
+    <p>
+        <strong>
+            ${photo.technique}
+        </strong>
+    </p>
+
+    <p>
+        Bronbeelden:
+        ${photo.sourceImages}
+    </p>
+
+    <p>
+        Lagen:
+        ${photo.layers}
+    </p>
         ?
         `
         <section class="before-after">
