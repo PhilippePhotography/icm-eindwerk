@@ -166,3 +166,72 @@ body{
 
 .back a:hover{
     color:#000
+
+.technique{
+
+    margin-top:60px;
+
+    padding-top:30px;
+
+    border-top:1px solid #e5e5e5;
+}
+
+.technique h2{
+
+    margin-bottom:15px;
+}
+
+.technique p{
+
+    margin-bottom:10px;
+}
+
+.bottom-section{
+
+    margin-top:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+}
+
+.signature{
+
+    text-align:right;
+}
+
+.signature img{
+
+    width:220px;
+}
+
+.signature-tag{
+
+    margin-top:5px;
+
+    font-size:10px;
+
+    color:#777;
+
+    letter-spacing:2px;
+}
+
+@media(max-width:900px){
+
+    .bottom-section{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:30px;
+    }
+
+    .signature{
+
+        text-align:left;
+    }
+
+}
