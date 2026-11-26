@@ -137,12 +137,13 @@ nav a:hover{
 .technical{
     display:flex;
     justify-content:center;
-    gap:70px;
+    gap:45px;
     flex-wrap:wrap;
-    margin:50px 0;
-    padding:25px 0;
+    margin:30px auto;
+    padding:20px 0;
     border-top:1px solid #e5e5e5;
     border-bottom:1px solid #e5e5e5;
+    max-width:900px;
 }
 
 .tech-item{
@@ -168,7 +169,7 @@ nav a:hover{
 
 .technique{
     max-width:700px;
-    margin:20px auto 60px auto;
+    margin:25px auto 40px auto;
     text-align:center;
 }
 
