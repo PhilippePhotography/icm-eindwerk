@@ -168,10 +168,8 @@ nav a:hover{
 
 .technique{
     max-width:700px;
-    margin:80px auto;
+    margin:40px auto 80px auto;
     text-align:center;
-    padding-top:35px;
-    border-top:1px solid #e5e5e5;
 }
 
 .technique h2{
@@ -229,10 +227,10 @@ nav a:hover{
 ========================= */
 
 .bottom-section{
-    margin-top:100px;
+    margin-top:70px;
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    align-items:flex-end;
 }
 
 .back-link a{
@@ -249,7 +247,7 @@ nav a:hover{
 }
 
 .signature img{
-    width:220px;
+    width:120px;
 }
 
 .signature-name{
