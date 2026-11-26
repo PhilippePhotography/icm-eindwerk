@@ -16,7 +16,10 @@
     "technique": "ICM Fine Art Composite",
     "sourceImages": "4",
     "layers": "5",
-    "story": "Tijdens een wandeling in het Brakelbos viel mijn aandacht niet op de bomen zelf maar op het samenspel van kleur en licht."
+    "story": "Tijdens een wandeling in het Brakelbos viel mijn aandacht niet op de bomen zelf maar op het samenspel van kleur en licht.",
+    "technique":"ICM Fine Art Composite",
+    "sourceImages":"4",
+    "layers":"5"
   },
 {
   "id": "towerbridge-nocturne",
@@ -35,6 +38,9 @@
   "technique": "ICM Fine Art",
   "sourceImages": "1",
   "layers": "1",
-  "story": "Een avondopname van Tower Bridge waarbij een gecontroleerde camerabeweging tijdens de belichting de iconische architectuur omzet in een impressionistische interpretatie van licht, vorm en beweging."
+  "story": "Een avondopname van Tower Bridge waarbij een gecontroleerde camerabeweging tijdens de belichting de iconische architectuur omzet in een impressionistische interpretatie van licht, vorm en beweging.",
+  "technique":"ICM Fine Art Composite",
+  "sourceImages":"1",
+  "layers":"1"
 }
 ]
