@@ -55,7 +55,7 @@ nav a:hover{
 }
 
 /* =========================
-   HERO
+   FOTO
 ========================= */
 
 .hero{
@@ -71,17 +71,21 @@ nav a:hover{
     display:block;
     width:100%;
     max-width:1300px;
-    margin:0 auto;
+    margin:auto;
     height:auto;
 }
 
+/* =========================
+   INFO BLOK
+========================= */
+
 .info-column{
-    max-width:850px;
+    max-width:900px;
     margin:60px auto 0 auto;
 }
 
 .info-column h1{
-    font-size:64px;
+    font-size:58px;
     line-height:1.05;
     margin-bottom:15px;
 }
@@ -116,7 +120,7 @@ nav a:hover{
 }
 
 /* =========================
-   STORY
+   VERHAAL
 ========================= */
 
 .info-column h2{
@@ -131,19 +135,28 @@ nav a:hover{
 }
 
 /* =========================
-   TECHNICAL DATA
+   TECHNISCHE GEGEVENS
 ========================= */
 
 .technical{
+
     display:flex;
+
     justify-content:center;
+
     gap:45px;
+
     flex-wrap:wrap;
-    margin:30px auto;
-    padding:20px 0;
-    border-top:1px solid #e5e5e5;
-    border-bottom:1px solid #e5e5e5;
+
     max-width:900px;
+
+    margin:60px auto 30px auto;
+
+    padding:25px 0;
+
+    border-top:1px solid #e5e5e5;
+
+    border-bottom:1px solid #e5e5e5;
 }
 
 .tech-item{
@@ -151,9 +164,9 @@ nav a:hover{
 }
 
 .tech-value{
-    font-size:16px;
+    font-size:20px;
     font-weight:600;
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 
 .tech-label{
@@ -164,12 +177,15 @@ nav a:hover{
 }
 
 /* =========================
-   TECHNIQUE
+   TECHNIEK
 ========================= */
 
 .technique{
-    max-width:700px;
-    margin:25px auto 40px auto;
+
+    max-width:600px;
+
+    margin:30px auto 60px auto;
+
     text-align:center;
 }
 
@@ -187,11 +203,11 @@ nav a:hover{
 }
 
 /* =========================
-   BEFORE / AFTER
+   VOOR / NA
 ========================= */
 
 .before-after{
-    margin-top:100px;
+    margin-top:80px;
 }
 
 .before-after h2{
@@ -224,21 +240,24 @@ nav a:hover{
 }
 
 /* =========================
-   FOOTER
+   ONDERSTE BALK
 ========================= */
 
 .bottom-section{
-    margin-top:70px;
+
+    margin-top:60px;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:flex-end;
 }
 
 .back-link a{
     text-decoration:none;
-    color:#888;
+    color:#777;
     font-size:13px;
-    letter-spacing:1px;
 }
 
 .back-link a:hover{
@@ -246,9 +265,6 @@ nav a:hover{
 }
 
 .signature{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
     text-align:center;
 }
 
@@ -256,18 +272,16 @@ nav a:hover{
     width:150px;
 }
 
-.signature-name{
-    font-family:cursive;
-    font-size:42px;
-    color:#222;
-}
-
 .signature-tag{
     margin-top:6px;
     font-size:10px;
     letter-spacing:2px;
     color:#777;
-    text-align:center;
+}
+
+.signature-name{
+    font-family:cursive;
+    font-size:42px;
 }
 
 /* =========================
@@ -290,10 +304,6 @@ nav a:hover{
         flex-wrap:wrap;
     }
 
-    .info-column{
-        margin-top:40px;
-    }
-
     .info-column h1{
         font-size:42px;
     }
@@ -307,7 +317,7 @@ nav a:hover{
     }
 
     .technical{
-        gap:40px;
+        gap:35px;
     }
 
     .compare{
@@ -319,14 +329,11 @@ nav a:hover{
     }
 
     .bottom-section{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:30px;
-    }
 
-    .signature{
-        text-align:center;
+        flex-direction:column;
+
         align-items:center;
-        width:100%;
+
+        gap:30px;
     }
 }
