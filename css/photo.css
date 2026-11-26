@@ -11,10 +11,14 @@ body {
 }
 
 .page {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 40px;
 }
+
+/* =========================
+   HEADER
+========================= */
 
 .header {
     display: flex;
@@ -49,25 +53,35 @@ nav a:hover {
     color: #000;
 }
 
-.hero {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    gap: 50px;
-    margin-bottom: 60px;
-}
+/* =========================
+   HERO IMAGE
+========================= */
 
-.image-column {
-    min-width: 0;
+.hero {
+    width: 100%;
+    margin-bottom: 80px;
 }
 
 .main-image {
-    width: 100%;
-    height: auto;
     display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 900px;
+    width: auto;
+    height: auto;
 }
 
-.info-column h1 {
-    font-size: 52px;
+/* =========================
+   CONTENT
+========================= */
+
+.content-column {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-column h1 {
+    font-size: 58px;
     line-height: 1.1;
     margin-bottom: 15px;
 }
@@ -81,36 +95,46 @@ nav a:hover {
     width: 70px;
     height: 2px;
     background: #222;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
+.content-column h2 {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.story {
+    line-height: 1.9;
+    color: #333;
+}
+
+/* =========================
+   AUDIO
+========================= */
+
 .audio-box {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .audio-title {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .audio-box audio {
     width: 100%;
 }
 
-.info-column h2 {
-    margin-bottom: 15px;
-}
-
-.story {
-    line-height: 1.8;
-}
+/* =========================
+   TECHNICAL
+========================= */
 
 .technical {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 60px;
     flex-wrap: wrap;
-    margin: 60px 0;
-    padding: 25px 0;
+    margin: 70px 0;
+    padding: 30px 0;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -121,13 +145,19 @@ nav a:hover {
 
 .tech-value {
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .tech-label {
-    font-size: 13px;
+    font-size: 12px;
     color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
+/* =========================
+   TECHNIQUE
+========================= */
 
 .technique {
     margin-top: 60px;
@@ -136,16 +166,20 @@ nav a:hover {
 }
 
 .technique h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .technique p {
-    margin-bottom: 10px;
-    line-height: 1.6;
+    margin-bottom: 12px;
+    line-height: 1.8;
 }
 
+/* =========================
+   BEFORE / AFTER
+========================= */
+
 .before-after {
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .before-after h2 {
@@ -175,6 +209,10 @@ nav a:hover {
     text-align: center;
     color: #666;
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 .bottom-section {
     margin-top: 100px;
@@ -207,11 +245,15 @@ nav a:hover {
     color: #777;
 }
 
-.signature-name{
-    font-family:cursive;
-    font-size:42px;
-    color:#222;
+.signature-name {
+    font-family: cursive;
+    font-size: 42px;
+    color: #222;
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 900px) {
 
@@ -219,57 +261,4 @@ nav a:hover {
         padding: 20px;
     }
 
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .info-column h1 {
-        font-size: 38px;
-    }
-
-    .compare {
-        grid-template-columns: 1fr;
-    }
-
-    .arrow {
-        transform: rotate(90deg);
-    }
-
-    .bottom-section {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 30px;
-    }
-
-    .signature {
-        text-align: left;
-    }
-    .technique{
-    
-        margin-top:60px;
-    
-        padding-top:30px;
-    
-        border-top:1px solid #e5e5e5;
-    }
-    
-    .technique h2{
-    
-        margin-bottom:15px;
-    }
-    
-    .technique p{
-    
-        margin-bottom:10px;
-    
-        line-height:1.8;
-    }
-    
-}
+    .
