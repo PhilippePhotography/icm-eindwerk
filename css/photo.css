@@ -244,11 +244,8 @@ nav a:hover{
 ========================= */
 
 .bottom-section{
-
     margin-top:60px;
-    max-width:1200px;
-    margin-left:auto;
-    margin-right:auto;
+    width:100%;
     display:flex;
     justify-content:space-between;
     align-items:flex-end;
@@ -265,7 +262,7 @@ nav a:hover{
 }
 
 .signature{
-    text-align:center;
+    text-align:right;
 }
 
 .signature img{
