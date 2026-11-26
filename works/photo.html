@@ -116,116 +116,105 @@ fetch("../data/photos.json")
 
     <section class="technical">
 
-        <div class="tech-item">
-            <div class="tech-value">${photo.camera}</div>
-            <div class="tech-label">Camera</div>
-        </div>
+<section class="technical">
 
-        <div class="tech-item">
-            <div class="tech-value">${photo.lens}</div>
-            <div class="tech-label">Lens</div>
-        </div>
+    <div class="tech-item">
+        <div class="tech-value">${photo.camera}</div>
+        <div class="tech-label">Camera</div>
+    </div>
 
-        <div class="tech-item">
-            <div class="tech-value">${photo.aperture}</div>
-            <div class="tech-label">Diafragma</div>
-        </div>
+    <div class="tech-item">
+        <div class="tech-value">${photo.lens}</div>
+        <div class="tech-label">Lens</div>
+    </div>
 
-        <div class="tech-item">
-            <div class="tech-value">${photo.shutter}</div>
-            <div class="tech-label">Sluitertijd</div>
-        </div>
+    <div class="tech-item">
+        <div class="tech-value">${photo.aperture}</div>
+        <div class="tech-label">Diafragma</div>
+    </div>
 
-        <div class="tech-item">
-            <div class="tech-value">${photo.iso}</div>
-            <div class="tech-label">ISO</div>
-        </div>
-<section class="technique">
+    <div class="tech-item">
+        <div class="tech-value">${photo.shutter}</div>
+        <div class="tech-label">Sluitertijd</div>
+    </div>
 
-    <h2>
-        Techniek
-    </h2>
+    <div class="tech-item">
+        <div class="tech-value">${photo.iso}</div>
+        <div class="tech-label">ISO</div>
+    </div>
 
-    <p>
-        <strong>
-            ${photo.technique}
-        </strong>
-    </p>
-
-    <p>
-        Bronbeelden:
-        ${photo.sourceImages}
-    </p>
-
-    <p>
-        Lagen:
-        ${photo.layers}
-    </p>
-
-</section>
 </section>
 
 <section class="technique">
 
-    <h2>
-        Techniek
-    </h2>
+    <h2>Techniek</h2>
 
     <p>
-        <strong>
-            ${photo.technique}
-        </strong>
+        <strong>${photo.technique}</strong>
     </p>
 
     <p>
-        Bronbeelden:
-        ${photo.sourceImages}
+        Bronbeelden: ${photo.sourceImages}
     </p>
 
     <p>
-        Lagen:
-        ${photo.layers}
+        Lagen: ${photo.layers}
     </p>
-        ?
-        `
-        <section class="before-after">
 
-            <h2>
-                Van origineel naar ICM
-            </h2>
+</section>
 
-            <div class="compare">
+${
 
-                <div>
-                    <img
-                        src="${photo.original}"
-                        alt="Origineel">
+    photo.original
 
-                    <div class="caption">
-                        Originele opname
-                    </div>
+    ?
+
+    `
+
+    <section class="before-after">
+
+        <h2>
+            Van origineel naar ICM
+        </h2>
+
+        <div class="compare">
+
+            <div>
+                <img
+                    src="${photo.original}"
+                    alt="Origineel">
+
+                <div class="caption">
+                    Originele opname
                 </div>
-
-                <div class="arrow">
-                    →
-                </div>
-
-                <div>
-                    <img
-                        src="${photo.image}"
-                        alt="ICM">
-
-                    <div class="caption">
-                        Eindresultaat
-                    </div>
-                </div>
-
             </div>
 
-        </section>
-        `
-        : ""
-    }
+            <div class="arrow">
+                →
+            </div>
+
+            <div>
+                <img
+                    src="${photo.image}"
+                    alt="ICM">
+
+                <div class="caption">
+                    Eindresultaat
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    `
+
+    :
+
+    ""
+
+}
+
 
 <div class="bottom-section">
 
