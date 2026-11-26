@@ -137,10 +137,11 @@ nav a:hover{
 .technical{
     display:flex;
     justify-content:center;
-    gap:70px;
+    gap:45px;
+    max-width:800px;
+    margin:70px auto;
     flex-wrap:wrap;
-    margin:80px 0;
-    padding:30px 0;
+    padding:25px 0;
     border-top:1px solid #e5e5e5;
     border-bottom:1px solid #e5e5e5;
 }
@@ -168,8 +169,10 @@ nav a:hover{
 
 .technique{
     max-width:700px;
-    margin:40px auto 80px auto;
+    margin:60px auto;
     text-align:center;
+    padding-top:35px;
+    border-top:1px solid #e5e5e5;
 }
 
 .technique h2{
@@ -235,7 +238,9 @@ nav a:hover{
 
 .back-link a{
     text-decoration:none;
-    color:#666;
+    color:#888;
+    font-size:13px;
+    letter-spacing:1px;
 }
 
 .back-link a:hover{
