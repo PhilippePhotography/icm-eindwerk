@@ -63,57 +63,53 @@ fetch("../data/photos.json")
     .innerHTML =
 
     `
-    <div class="hero">
+<div class="hero">
 
-        <div class="image-column">
+    <img
+        class="main-image"
+        src="${photo.image}"
+        alt="${photo.title}"
+        loading="eager">
 
-            <img
-                class="main-image"
-                src="${photo.image}"
-                alt="${photo.title}"
-                loading="eager">
+</div>
 
-        </div>
+<div class="content-column">
 
-        <div class="info-column">
+    <h1>
+        ${photo.title}
+    </h1>
 
-            <h1>
-                ${photo.title}
-            </h1>
-
-            <div class="location">
-                ${photo.location} · ${photo.year}
-            </div>
-
-            <div class="divider"></div>
-
-            ${
-                photo.audio
-                ?
-                `
-                <div class="audio-box">
-                    <div class="audio-title">
-                    🎧 Luister naar het verhaal achter dit beeld
-                    </div>
-
-                    <audio controls>
-                        <source src="${photo.audio}">
-                    </audio>
-                </div>
-                `
-                : ""
-            }
-
-            <h2>Het verhaal</h2>
-
-            <p class="story">
-                ${photo.story}
-            </p>
-
-        </div>
-
+    <div class="location">
+        ${photo.location} · ${photo.year}
     </div>
 
+    <div class="divider"></div>
+
+    ${
+        photo.audio
+        ?
+        `
+        <div class="audio-box">
+            <div class="audio-title">
+                🎧 Luister naar het verhaal achter dit beeld
+            </div>
+
+            <audio controls>
+                <source src="${photo.audio}">
+            </audio>
+        </div>
+        `
+        : ""
+    }
+
+    <h2>Het verhaal</h2>
+
+    <p class="story">
+        ${photo.story}
+    </p>
+
+</div>
+<div class="content-column">
     <section class="technical">
 
 <section class="technical">
@@ -215,7 +211,7 @@ ${
 
 }
 
-
+</div>
 <div class="bottom-section">
 
     <div class="back-link">
