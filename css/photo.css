@@ -4,6 +4,11 @@
     box-sizing:border-box;
 }
 
+html,
+body{
+    overflow-x:hidden;
+}
+
 body{
     background:#f8f7f5;
     color:#222;
@@ -307,6 +312,17 @@ MOBILE
         font-size:17px;
     }
 
+    .hero{
+        width:100%;
+        overflow:hidden;
+    }
+    
+    .hero-image{
+        width:100%;
+        max-width:100%;
+        height:auto;
+    }
+    
     .comparison{
         grid-template-columns:1fr;
     }
@@ -315,4 +331,13 @@ MOBILE
         transform:rotate(90deg);
     }
 
+    .museum-content{
+        max-width:100%;
+    }
+    
+    .technical-section{
+        flex-direction:column;
+        gap:12px;
+    }
+    
 }
