@@ -142,12 +142,33 @@ TECHNICAL
 ===================== */
 
 .technical-section{
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
 }
 
-.technical-line{
-    font-size:18px;
-    margin-bottom:8px;
+.tech-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:16px;
+    color:#444;
+}
+
+.tech-icon{
+    width:18px;
+    height:18px;
+    color:#777;
+    flex-shrink:0;
+}
+
+.iso-label{
+    font-size:11px;
+    letter-spacing:1px;
+    color:#888;
+    text-transform:uppercase;
 }
 
 /* =====================
