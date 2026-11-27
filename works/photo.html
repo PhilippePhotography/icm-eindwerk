@@ -66,138 +66,169 @@ fetch("../data/photos.json")
 
         <section class="hero">
 
+    <img
+        src="${photo.image}"
+        alt="${photo.title}"
+        class="hero-image"
+        loading="eager">
+
+</section>
+
+<section class="artwork-info">
+
+    <h1 class="artwork-title">
+        ${photo.title}
+    </h1>
+
+    <div class="artwork-location">
+        ${photo.location} · ${photo.year}
+    </div>
+
+    ${
+        photo.audio
+        ?
+        `
+        <div class="audio-section">
+
+            <div class="audio-label">
+                🎧 Luister naar het verhaal achter dit beeld
+            </div>
+
+            <audio controls>
+                <source src="${photo.audio}">
+            </audio>
+
+        </div>
+        `
+        :
+        ""
+    }
+
+    <div class="section-divider"></div>
+
+    <section class="story-section">
+
+        <h2>Het verhaal</h2>
+
+        <p class="story-text">
+            ${photo.story}
+        </p>
+
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="tech-section">
+
+        <div class="tech-line">
+
+            <strong>${photo.camera}</strong>
+            ·
+            <strong>${photo.lens}</strong>
+
+        </div>
+
+        <div class="tech-line">
+
+            <strong>${photo.aperture}</strong>
+            ·
+            <strong>${photo.shutter}</strong>
+            ·
+            <strong>ISO ${photo.iso}</strong>
+
+        </div>
+
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="technique-section">
+
+        <div class="technique-name">
+            ${photo.technique}
+        </div>
+
+        <div class="technique-meta">
+            ${photo.sourceImages} bronbeelden ·
+            ${photo.layers} lagen
+        </div>
+
+    </section>
+
+</section>
+
+${
+photo.original
+?
+`
+<section class="before-after">
+
+    <h2>
+        Van origineel naar eindbeeld
+    </h2>
+
+    <div class="comparison">
+
+        <div>
+
+            <img
+                src="${photo.original}"
+                alt="Origineel">
+
+            <div class="caption">
+                Originele opname
+            </div>
+
+        </div>
+
+        <div class="arrow">
+            →
+        </div>
+
+        <div>
+
             <img
                 src="${photo.image}"
-                alt="${photo.title}"
-                class="hero-image"
-                loading="eager">
+                alt="Eindresultaat">
 
-        </section>
+            <div class="caption">
+                Eindresultaat
+            </div>
 
-        <section class="details-grid">
+        </div>
 
-            <aside class="meta-column">
+    </div>
 
-                <h1>${photo.title}</h1>
+</section>
+`
+:
+""
+}
 
-                <div class="meta-location">
-                    ${photo.location} · ${photo.year}
-                </div>
+<section class="signature-section">
 
-                <div class="meta-divider"></div>
+    <img
+        src="../signature/signature.png"
+        alt="Philippe Verlinde">
 
-                ${
-                    photo.audio
-                    ?
-                    `
-                    <div class="audio-block">
+    <div class="signature-text">
 
-                        <div class="audio-title">
-                            🎧 Luister naar het verhaal achter dit beeld
-                        </div>
+        Captured Moments<br>
+        Lasting Stories
 
-                        <audio controls>
-                            <source src="${photo.audio}">
-                        </audio>
+    </div>
 
-                    </div>
-                    `
-                    :
-                    ""
-                }
+</section>
 
-                <div class="camera-data">
+<section class="back-section">
 
-                    <div class="camera-item">
-                        <span>Camera</span>
-                        <strong>${photo.camera}</strong>
-                    </div>
+    <a
+        href="../index.html"
+        class="back-link">
+        ← Terug naar alle werken
+    </a>
 
-                    <div class="camera-item">
-                        <span>Lens</span>
-                        <strong>${photo.lens}</strong>
-                    </div>
-
-                    <div class="camera-item">
-                        <span>Diafragma</span>
-                        <strong>${photo.aperture}</strong>
-                    </div>
-
-                    <div class="camera-item">
-                        <span>Sluitertijd</span>
-                        <strong>${photo.shutter}</strong>
-                    </div>
-
-                    <div class="camera-item">
-                        <span>ISO</span>
-                        <strong>${photo.iso}</strong>
-                    </div>
-
-                </div>
-
-            </aside>
-
-            <article class="story-column">
-
-                <h2>Het verhaal</h2>
-
-                <p class="story-text">
-                    ${photo.story}
-                </p>
-
-            </article>
-
-        </section>
-
-        <section class="technique-section">
-
-            <h2>Techniek</h2>
-
-            <h3>${photo.technique}</h3>
-
-            <p>Bronbeelden: ${photo.sourceImages}</p>
-
-            <p>Lagen: ${photo.layers}</p>
-
-        </section>
-
-        ${
-            photo.original
-            ?
-            `
-            <section class="before-after">
-
-                <h2>Van origineel naar eindbeeld</h2>
-
-                <div class="comparison">
-
-                    <div class="comparison-image">
-
-                        <img
-                            src="${photo.original}"
-                            alt="Origineel">
-
-                        <p>Originele opname</p>
-
-                    </div>
-
-                    <div class="comparison-arrow">
-                        →
-                    </div>
-
-                    <div class="comparison-image">
-
-                        <img
-                            src="${photo.image}"
-                            alt="Eindresultaat">
-
-                        <p>Eindresultaat</p>
-
-                    </div>
-
-                </div>
-
-            </section>
+</section>
             `
             :
             ""
