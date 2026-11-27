@@ -12,9 +12,10 @@
 
 <div class="page">
 
-    <header class="header">
+    <header class="site-header">
 
-        <div>
+        <div class="brand">
+
             <div class="logo">
                 PHILIPPE VERLINDE
             </div>
@@ -22,9 +23,10 @@
             <div class="subtitle">
                 FINE ART PHOTOGRAPHY
             </div>
+
         </div>
 
-        <nav>
+        <nav class="main-nav">
             <a href="../index.html">Expo</a>
             <a href="#">Over mij</a>
             <a href="#">Contact</a>
@@ -42,6 +44,7 @@ const params = new URLSearchParams(window.location.search);
 const photoId = params.get("id");
 
 fetch("../data/photos.json")
+
 .then(response => response.json())
 
 .then(data => {
@@ -52,210 +55,191 @@ fetch("../data/photos.json")
 
     if(!photo){
 
-        document.getElementById("content")
-            .innerHTML =
-            "<h2>Foto niet gevonden</h2>";
+        document.getElementById("content").innerHTML = `
+            <h2>Foto niet gevonden</h2>
+        `;
 
         return;
     }
 
-    document.getElementById("content")
-    .innerHTML =
+    document.getElementById("content").innerHTML = `
 
-    `
-<div class="hero">
+        <section class="hero">
 
-    <img
-        class="main-image"
-        src="${photo.image}"
-        alt="${photo.title}"
-        loading="eager">
+            <img
+                src="${photo.image}"
+                alt="${photo.title}"
+                class="hero-image"
+                loading="eager">
 
-</div>
+        </section>
 
-<div class="content-column">
+        <section class="details-grid">
 
-    <h1>
-        ${photo.title}
-    </h1>
+            <aside class="meta-column">
 
-    <div class="location">
-        ${photo.location} · ${photo.year}
-    </div>
+                <h1>${photo.title}</h1>
 
-    <div class="divider"></div>
+                <div class="meta-location">
+                    ${photo.location} · ${photo.year}
+                </div>
 
-    ${
-        photo.audio
-        ?
-        `
-        <div class="audio-box">
-            <div class="audio-title">
-                🎧 Luister naar het verhaal achter dit beeld
-            </div>
+                <div class="meta-divider"></div>
 
-            <audio controls>
-                <source src="${photo.audio}">
-            </audio>
-        </div>
-        `
-        : ""
-    }
+                ${
+                    photo.audio
+                    ?
+                    `
+                    <div class="audio-block">
 
-    <h2>Het verhaal</h2>
+                        <div class="audio-title">
+                            🎧 Luister naar het verhaal achter dit beeld
+                        </div>
 
-    <p class="story">
-        ${photo.story}
-    </p>
+                        <audio controls>
+                            <source src="${photo.audio}">
+                        </audio>
 
-</div>
-<div class="content-column">
-    <section class="technical">
+                    </div>
+                    `
+                    :
+                    ""
+                }
 
-<section class="technical">
+                <div class="camera-data">
 
-    <section class="technical">
+                    <div class="camera-item">
+                        <span>Camera</span>
+                        <strong>${photo.camera}</strong>
+                    </div>
 
-    <div class="tech-item">
-        <div class="tech-value">${photo.camera}</div>
-        <div class="tech-label">Camera</div>
-    </div>
+                    <div class="camera-item">
+                        <span>Lens</span>
+                        <strong>${photo.lens}</strong>
+                    </div>
 
-    <div class="tech-item">
-        <div class="tech-value">${photo.lens}</div>
-        <div class="tech-label">Lens</div>
-    </div>
+                    <div class="camera-item">
+                        <span>Diafragma</span>
+                        <strong>${photo.aperture}</strong>
+                    </div>
 
-    <div class="tech-item">
-        <div class="tech-value">${photo.aperture}</div>
-        <div class="tech-label">Diafragma</div>
-    </div>
+                    <div class="camera-item">
+                        <span>Sluitertijd</span>
+                        <strong>${photo.shutter}</strong>
+                    </div>
 
-    <div class="tech-item">
-        <div class="tech-value">${photo.shutter}</div>
-        <div class="tech-label">Sluitertijd</div>
-    </div>
+                    <div class="camera-item">
+                        <span>ISO</span>
+                        <strong>${photo.iso}</strong>
+                    </div>
 
-    <div class="tech-item">
-        <div class="tech-value">${photo.iso}</div>
-        <div class="tech-label">ISO</div>
-    </div>
+                </div>
 
-</section>
+            </aside>
 
-<section class="technique">
+            <article class="story-column">
 
-    <h2>Techniek</h2>
+                <h2>Het verhaal</h2>
 
-    <p>
-        <strong>${photo.technique}</strong>
-    </p>
+                <p class="story-text">
+                    ${photo.story}
+                </p>
 
-    <p>
-        Bronbeelden: ${photo.sourceImages}
-    </p>
+            </article>
 
-    <p>
-        Lagen: ${photo.layers}
-    </p>
+        </section>
 
-</section>
+        <section class="technique-section">
 
-${
+            <h2>Techniek</h2>
 
-    photo.original
+            <h3>${photo.technique}</h3>
 
-    ?
+            <p>Bronbeelden: ${photo.sourceImages}</p>
 
-    `
+            <p>Lagen: ${photo.layers}</p>
 
-    <section class="before-after">
+        </section>
 
-        <h2>
-            Van origineel naar ICM
-        </h2>
+        ${
+            photo.original
+            ?
+            `
+            <section class="before-after">
 
-        <div class="compare">
+                <h2>Van origineel naar eindbeeld</h2>
 
-            <div>
+                <div class="comparison">
+
+                    <div class="comparison-image">
+
+                        <img
+                            src="${photo.original}"
+                            alt="Origineel">
+
+                        <p>Originele opname</p>
+
+                    </div>
+
+                    <div class="comparison-arrow">
+                        →
+                    </div>
+
+                    <div class="comparison-image">
+
+                        <img
+                            src="${photo.image}"
+                            alt="Eindresultaat">
+
+                        <p>Eindresultaat</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+            `
+            :
+            ""
+        }
+
+        <footer class="page-footer">
+
+            <a
+                href="../index.html"
+                class="back-link">
+                ← Terug naar alle werken
+            </a>
+
+            <div class="signature">
 
                 <img
-                    src="${photo.original}"
-                    alt="Origineel">
+                    src="../signature/signature.png"
+                    alt="Philippe Verlinde">
 
-                <div class="caption">
-                    Originele opname
+                <div class="signature-text">
+
+                    CAPTURED MOMENTS<br>
+                    LASTING STORIES
+
                 </div>
 
             </div>
 
-            <div class="arrow">
-                →
-            </div>
-
-            <div>
-
-                <img
-                    src="${photo.image}"
-                    alt="ICM">
-
-                <div class="caption">
-                    Eindresultaat
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    `
-
-    :
-
-    ""
-
-}
-<div class="bottom-section">
-
-    <div class="back-link">
-
-        <a href="../index.html">
-
-            ← Terug naar alle werken
-
-        </a>
-
-    </div>
-
-    <div class="signature">
-
-        <img
-            src="../signature/signature.png"
-            alt="Handtekening">
-
-        <div class="signature-tag">
-
-            CAPTURED MOMENTS<br>
-            LASTING STORIES
-
-        </div>
-
-    </div>
-
-</div>
-
+        </footer>
 
     `;
+
 })
 
 .catch(error => {
 
     console.error(error);
 
-    document.getElementById("content")
-        .innerHTML =
-        "<h2>Fout bij laden van gegevens</h2>";
+    document.getElementById("content").innerHTML = `
+        <h2>Fout bij laden van gegevens</h2>
+    `;
+
 });
 
 </script>
