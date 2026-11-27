@@ -339,5 +339,13 @@ MOBILE
         flex-direction:column;
         gap:12px;
     }
+
+    .tech-item{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:10px;
+    }
     
 }
