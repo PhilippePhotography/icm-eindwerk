@@ -5,21 +5,21 @@
 }
 
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     background:#ffffff;
     color:#222;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     line-height:1.8;
 }
 
 .page{
-    max-width:1700px;
-    margin:auto;
-    padding:40px 60px 80px;
+    max-width:1400px;
+    margin:0 auto;
+    padding:40px;
 }
 
-/* -------------------------------- */
-/* HEADER */
-/* -------------------------------- */
+/* =========================
+HEADER
+========================= */
 
 .site-header{
     display:flex;
@@ -34,10 +34,10 @@ body{
 }
 
 .subtitle{
-    margin-top:5px;
+    margin-top:6px;
     font-size:11px;
-    color:#888;
     letter-spacing:2px;
+    color:#999;
 }
 
 .main-nav{
@@ -55,224 +55,199 @@ body{
     color:#000;
 }
 
-/* -------------------------------- */
-/* HERO */
-/* -------------------------------- */
+/* =========================
+IMAGE
+========================= */
 
 .hero{
-    margin-bottom:70px;
+    text-align:center;
 }
 
 .hero-image{
-    width:100%;
     display:block;
+    margin:0 auto;
+    max-width:1000px;
+    max-height:75vh;
+    width:auto;
+    height:auto;
 }
 
-/* -------------------------------- */
-/* CONTENT */
-/* -------------------------------- */
+/* =========================
+INFO
+========================= */
 
-.details-grid{
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:320px 1fr;
-    gap:120px;
+.artwork-info{
+    max-width:800px;
+    margin:50px auto 0 auto;
 }
 
-/* -------------------------------- */
-/* META */
-/* -------------------------------- */
-
-.meta-column h1{
-    font-size:48px;
+.artwork-title{
+    font-size:42px;
     line-height:1.1;
     margin-bottom:10px;
 }
 
-.meta-location{
+.artwork-location{
     color:#777;
     font-size:15px;
 }
 
-.meta-divider{
-    width:70px;
-    height:2px;
-    background:#222;
-    margin:30px 0;
+.section-divider{
+    width:100%;
+    height:1px;
+    background:#e6e6e6;
+    margin:40px 0;
 }
 
-.audio-block{
-    margin-bottom:40px;
+/* =========================
+AUDIO
+========================= */
+
+.audio-section{
+    margin-top:35px;
 }
 
-.audio-title{
-    margin-bottom:15px;
-    font-size:14px;
+.audio-label{
     color:#666;
+    margin-bottom:12px;
+    font-size:14px;
 }
 
-.audio-block audio{
+.audio-section audio{
     width:100%;
 }
 
-.camera-data{
-    margin-top:30px;
-}
+/* =========================
+VERHAAL
+========================= */
 
-.camera-item{
-    padding:14px 0;
-    border-bottom:1px solid #eeeeee;
-}
-
-.camera-item span{
-    display:block;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    color:#999;
-    margin-bottom:2px;
-}
-
-.camera-item strong{
-    font-weight:600;
-}
-
-/* -------------------------------- */
-/* STORY */
-/* -------------------------------- */
-
-.story-column{
-    max-width:900px;
-}
-
-.story-column h2{
-    font-size:32px;
-    margin-bottom:25px;
+.story-section h2{
+    font-size:26px;
+    margin-bottom:20px;
 }
 
 .story-text{
-    font-size:19px;
-    line-height:2;
+    font-size:18px;
     color:#333;
+    line-height:2;
 }
 
-/* -------------------------------- */
-/* TECHNIQUE */
-/* -------------------------------- */
+/* =========================
+TECHNICAL
+========================= */
+
+.tech-section{
+    text-align:center;
+}
+
+.tech-line{
+    font-size:16px;
+    color:#444;
+    line-height:2;
+}
+
+.tech-line strong{
+    font-weight:600;
+}
+
+/* =========================
+TECHNIQUE
+========================= */
 
 .technique-section{
-    max-width:700px;
-    margin:100px auto;
     text-align:center;
-    padding-top:50px;
-    border-top:1px solid #e5e5e5;
 }
 
-.technique-section h2{
-    margin-bottom:20px;
+.technique-name{
+    font-size:28px;
+    margin-bottom:12px;
 }
 
-.technique-section h3{
-    font-size:24px;
-    margin-bottom:20px;
+.technique-meta{
+    color:#666;
 }
 
-.technique-section p{
-    margin-bottom:10px;
-}
-
-/* -------------------------------- */
-/* BEFORE AFTER */
-/* -------------------------------- */
+/* =========================
+BEFORE AFTER
+========================= */
 
 .before-after{
-    margin-top:80px;
+    margin-top:70px;
 }
 
 .before-after h2{
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:30px;
 }
 
 .comparison{
     display:grid;
-    grid-template-columns:1fr 100px 1fr;
-    gap:30px;
+    grid-template-columns:1fr 80px 1fr;
+    gap:20px;
     align-items:center;
 }
 
-.comparison-image img{
+.comparison img{
     width:100%;
     display:block;
 }
 
-.comparison-image p{
+.arrow{
     text-align:center;
-    margin-top:12px;
-    color:#666;
-}
-
-.comparison-arrow{
-    text-align:center;
-    font-size:50px;
+    font-size:48px;
     color:#888;
 }
 
-/* -------------------------------- */
-/* FOOTER */
-/* -------------------------------- */
+.caption{
+    text-align:center;
+    margin-top:10px;
+    color:#777;
+    font-size:14px;
+}
 
-.page-footer{
-    margin-top:100px;
+/* =========================
+SIGNATURE
+========================= */
 
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
+.signature-section{
+    text-align:center;
+    margin-top:70px;
+}
 
-    border-top:1px solid #e5e5e5;
-    padding-top:40px;
+.signature-section img{
+    width:180px;
+    display:block;
+    margin:0 auto 15px auto;
+}
+
+.signature-text{
+    font-size:11px;
+    letter-spacing:2px;
+    color:#888;
+    text-transform:uppercase;
+}
+
+/* =========================
+BACK
+========================= */
+
+.back-section{
+    text-align:center;
+    margin-top:50px;
 }
 
 .back-link{
     text-decoration:none;
-    color:#777;
-    font-size:14px;
+    color:#666;
 }
 
 .back-link:hover{
     color:#000;
 }
 
-.signature{
-    text-align:right;
-}
-
-.signature img{
-    width:170px;
-    display:block;
-    margin-left:auto;
-}
-
-.signature-text{
-    margin-top:10px;
-    font-size:10px;
-    color:#888;
-    letter-spacing:2px;
-}
-
-/* -------------------------------- */
-/* MOBILE */
-/* -------------------------------- */
-
-@media(max-width:1100px){
-
-    .details-grid{
-        grid-template-columns:1fr;
-        gap:60px;
-    }
-
-}
+/* =========================
+MOBILE
+========================= */
 
 @media(max-width:768px){
 
@@ -285,38 +260,20 @@ body{
         gap:20px;
     }
 
-    .meta-column h1{
-        font-size:36px;
+    .hero-image{
+        max-height:none;
+        max-width:100%;
     }
 
-    .story-column h2{
-        font-size:28px;
-    }
-
-    .story-text{
-        font-size:17px;
+    .artwork-title{
+        font-size:34px;
     }
 
     .comparison{
         grid-template-columns:1fr;
     }
 
-    .comparison-arrow{
+    .arrow{
         transform:rotate(90deg);
     }
-
-    .page-footer{
-        flex-direction:column;
-        align-items:center;
-        gap:30px;
-    }
-
-    .signature{
-        text-align:center;
-    }
-
-    .signature img{
-        margin:0 auto;
-    }
-
 }
