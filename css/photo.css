@@ -67,7 +67,7 @@ IMAGE
     display:block;
     margin:auto;
 
-    max-width:100%;
+    max-width:1100px;
     max-height:75vh;
 
     width:auto;
@@ -81,7 +81,7 @@ CONTENT
 ===================== */
 
 .museum-content{
-    max-width:850px;
+    max-width:1100px;
     margin:auto;
     text-align:center;
 }
@@ -161,6 +161,18 @@ TECHNIQUE
 
 .technique-meta{
     color:#666;
+}
+
+/* =====================
+BREEDTE UITLIJNEN
+===================== */
+
+.story-section,
+.technical-section,
+.technique-section{
+    max-width:1000px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /* =====================
