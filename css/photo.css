@@ -151,33 +151,29 @@ TECHNICAL
     justify-content:center;
     align-items:center;
     flex-wrap:wrap;
-    gap:30px;
+    gap:35px;
 }
 
-.tech-icon{
-    width:16px !important;
-    height:16px !important;
-    min-width:16px;
-    max-width:16px;
-    min-height:16px;
-    max-height:16px;
-}
+.tech-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
 
-.tech-icon{
-    width:18px !important;
-    height:18px !important;
-    min-width:18px;
-    max-width:18px;
-    min-height:18px;
-    max-height:18px;
-    display:block;
-    flex-shrink:0;
-    color:#777;
+    font-size:16px;
+    color:#444;
 }
 
 .tech-item svg{
-    width:18px !important;
-    height:18px !important;
+    width:18px;
+    height:18px;
+    min-width:18px;
+    min-height:18px;
+
+    color:#999;
+
+    display:block;
+    flex-shrink:0;
 }
 
 .iso-label{
