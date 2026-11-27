@@ -149,12 +149,13 @@ TECHNICAL
     gap:30px;
 }
 
-.tech-item{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-size:16px;
-    color:#444;
+.tech-icon{
+    width:16px !important;
+    height:16px !important;
+    min-width:16px;
+    max-width:16px;
+    min-height:16px;
+    max-height:16px;
 }
 
 .tech-icon{
