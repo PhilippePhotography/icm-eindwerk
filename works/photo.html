@@ -2,10 +2,14 @@
 <html lang="nl">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Photo Detail</title>
+
     <link rel="stylesheet" href="../css/photo.css">
+
 </head>
 
 <body>
@@ -27,9 +31,11 @@
         </div>
 
         <nav class="main-nav">
+
             <a href="../index.html">Expo</a>
             <a href="#">Over mij</a>
             <a href="#">Contact</a>
+
         </nav>
 
     </header>
@@ -55,209 +61,183 @@ fetch("../data/photos.json")
 
     if(!photo){
 
-        document.getElementById("content").innerHTML = `
+        document.getElementById("content").innerHTML =
+        `
             <h2>Foto niet gevonden</h2>
         `;
 
         return;
     }
 
-    document.getElementById("content").innerHTML = `
+    document.getElementById("content").innerHTML =
+    `
 
-        <section class="hero">
+    <section class="hero">
 
-    <img
-        src="${photo.image}"
-        alt="${photo.title}"
-        class="hero-image"
-        loading="eager">
-
-</section>
-
-<section class="artwork-info">
-
-    <h1 class="artwork-title">
-        ${photo.title}
-    </h1>
-
-    <div class="artwork-location">
-        ${photo.location} · ${photo.year}
-    </div>
-
-    ${
-        photo.audio
-        ?
-        `
-        <div class="audio-section">
-
-            <div class="audio-label">
-                🎧 Luister naar het verhaal achter dit beeld
-            </div>
-
-            <audio controls>
-                <source src="${photo.audio}">
-            </audio>
-
-        </div>
-        `
-        :
-        ""
-    }
-
-    <div class="section-divider"></div>
-
-    <section class="story-section">
-
-        <h2>Het verhaal</h2>
-
-        <p class="story-text">
-            ${photo.story}
-        </p>
+        <img
+            src="${photo.image}"
+            alt="${photo.title}"
+            class="hero-image"
+            loading="eager">
 
     </section>
 
-    <div class="section-divider"></div>
+    <section class="museum-content">
 
-    <section class="tech-section">
+        <h1 class="title">
+            ${photo.title}
+        </h1>
 
-        <div class="tech-line">
-
-            <strong>${photo.camera}</strong>
-            ·
-            <strong>${photo.lens}</strong>
-
+        <div class="location">
+            ${photo.location} · ${photo.year}
         </div>
 
-        <div class="tech-line">
+        ${
+            photo.audio
+            ?
+            `
+            <div class="audio-section">
 
-            <strong>${photo.aperture}</strong>
-            ·
-            <strong>${photo.shutter}</strong>
-            ·
-            <strong>ISO ${photo.iso}</strong>
+                <div class="audio-label">
+                    🎧 Luister naar het verhaal achter dit beeld
+                </div>
 
-        </div>
+                <audio controls>
+                    <source src="${photo.audio}">
+                </audio>
 
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section class="technique-section">
-
-        <div class="technique-name">
-            ${photo.technique}
-        </div>
-
-        <div class="technique-meta">
-            ${photo.sourceImages} bronbeelden ·
-            ${photo.layers} lagen
-        </div>
-
-    </section>
-
-</section>
-
-${
-photo.original
-?
-`
-<section class="before-after">
-
-    <h2>
-        Van origineel naar eindbeeld
-    </h2>
-
-    <div class="comparison">
-
-        <div>
-
-            <img
-                src="${photo.original}"
-                alt="Origineel">
-
-            <div class="caption">
-                Originele opname
             </div>
-
-        </div>
-
-        <div class="arrow">
-            →
-        </div>
-
-        <div>
-
-            <img
-                src="${photo.image}"
-                alt="Eindresultaat">
-
-            <div class="caption">
-                Eindresultaat
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-`
-:
-""
-}
-
-<section class="signature-section">
-
-    <img
-        src="../signature/signature.png"
-        alt="Philippe Verlinde">
-
-    <div class="signature-text">
-
-        Captured Moments<br>
-        Lasting Stories
-
-    </div>
-
-</section>
-
-<section class="back-section">
-
-    <a
-        href="../index.html"
-        class="back-link">
-        ← Terug naar alle werken
-    </a>
-
-</section>
             `
             :
             ""
         }
 
-        <footer class="page-footer">
+        <div class="divider"></div>
 
-            <a
-                href="../index.html"
-                class="back-link">
-                ← Terug naar alle werken
-            </a>
+        <section class="story-section">
 
-            <div class="signature">
+            <h2>Het verhaal</h2>
 
-                <img
-                    src="../signature/signature.png"
-                    alt="Philippe Verlinde">
+            <p class="story-text">
+                ${photo.story}
+            </p>
 
-                <div class="signature-text">
+        </section>
 
-                    CAPTURED MOMENTS<br>
-                    LASTING STORIES
+        <div class="divider"></div>
+
+        <section class="technical-section">
+
+            <p class="technical-line">
+
+                ${photo.camera}
+                ·
+                ${photo.lens}
+
+            </p>
+
+            <p class="technical-line">
+
+                ${photo.aperture}
+                ·
+                ${photo.shutter}
+                ·
+                ISO ${photo.iso}
+
+            </p>
+
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="technique-section">
+
+            <div class="technique-name">
+                ${photo.technique}
+            </div>
+
+            <div class="technique-meta">
+                ${photo.sourceImages} bronbeelden · ${photo.layers} lagen
+            </div>
+
+        </section>
+
+    </section>
+
+    ${
+        photo.original
+        ?
+        `
+        <section class="before-after">
+
+            <h2>
+                Van origineel naar eindbeeld
+            </h2>
+
+            <div class="comparison">
+
+                <div class="comparison-item">
+
+                    <img
+                        src="${photo.original}"
+                        alt="Origineel">
+
+                    <div class="caption">
+                        Originele opname
+                    </div>
+
+                </div>
+
+                <div class="comparison-arrow">
+                    →
+                </div>
+
+                <div class="comparison-item">
+
+                    <img
+                        src="${photo.image}"
+                        alt="Eindresultaat">
+
+                    <div class="caption">
+                        Eindresultaat
+                    </div>
 
                 </div>
 
             </div>
 
-        </footer>
+        </section>
+        `
+        :
+        ""
+    }
+
+    <section class="signature-section">
+
+        <img
+            src="../signature/signature.png"
+            alt="Handtekening">
+
+        <div class="signature-tag">
+
+            CAPTURED MOMENTS<br>
+            LASTING STORIES
+
+        </div>
+
+    </section>
+
+    <section class="back-section">
+
+        <a
+            href="../index.html"
+            class="back-link">
+
+            ← Terug naar alle werken
+
+        </a>
+
+    </section>
 
     `;
 
@@ -267,7 +247,8 @@ photo.original
 
     console.error(error);
 
-    document.getElementById("content").innerHTML = `
+    document.getElementById("content").innerHTML =
+    `
         <h2>Fout bij laden van gegevens</h2>
     `;
 
